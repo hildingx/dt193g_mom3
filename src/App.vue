@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main>
+  <main class="container py-4">
     <RouterView />
   </main>
 </template>
@@ -16,8 +16,6 @@ export default {
   }
 }
 </script>
-
-
 
 <style scoped>
 

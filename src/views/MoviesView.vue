@@ -1,26 +1,27 @@
 <template>
-    <h2>Filmlista</h2>
-    <p>
-        En undersida som konsumerar din externa webbtjänst och skriver ut på lämpligt sätt. 
-        Förslagsvis till en tabell. Här ska det också gå att radera data och finnas formulär för att lägga till data.
-    </p>
-
-    <h2>Filmer</h2>
-    <AddMovie @movieAdded="getMovies()" />
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Titel</th>
-                <th>Längd</th>
-                <th>Beskrivning</th>
-                <th>Sett</th>
-                <th>Åtgärder</th>
-            </tr>
-        </thead>
-        <tbody>
-            <Movie v-for="movie in movies" :movie="movie" :key="movie._id" @deleteMovie="deleteMovie" />
-        </tbody>
-    </table>
+    <section class="container mx-auto my-5">
+        <AddMovie @movieAdded="getMovies()" />
+    </section>
+    
+    <section class="container mx-auto my-5" style="max-width: 900px;">
+        <h2>Filmlista</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">Titel</th>
+                        <th scope="col">Längd</th>
+                        <th scope="col">Beskrivning</th>
+                        <th scope="col">Sett</th>
+                        <th scope="col" class="text-nowrap">Ta bort</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <Movie v-for="movie in movies" :movie="movie" :key="movie._id" @deleteMovie="deleteMovie" />
+                </tbody>
+            </table>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -64,3 +65,7 @@
         }
     }
 </script>
+
+<style scoped>
+
+</style>

@@ -35,13 +35,7 @@
         },
         data() {
             return {
-                movies: [],
-                newMovie: {
-                    name: "",
-                    length: "",
-                    description: "",
-                    watched: false
-                }
+                movies: []
             }
         },
         methods: {

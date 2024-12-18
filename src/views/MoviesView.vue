@@ -25,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Movie-komponent för att iterera varje film -->
+                    <!-- Movie-komponent för att iterera över varje film. Skicka film som prop till Movie-komponent -->
                     <Movie v-for="movie in movies" :movie="movie" :key="movie._id" @deleteMovie="deleteMovie" />
                 </tbody>
             </table>

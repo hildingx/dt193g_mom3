@@ -43,8 +43,15 @@
             <input id="watched" type="checkbox" v-model="newMovie.watched" class="form-check-input" />
             <label for="watched" class="form-check-label">Sett</label>
         </div>
+
+        <div class="alert alert-dark">
+            <strong>Förhandsvisning av titel:</strong> {{ newMovie.name }}<br>
+            <strong>Förhandsvisning av längd:</strong> {{ newMovie.length }}<br>
+            <strong>Förhandsvisning av beskrivning:</strong> {{ newMovie.description }}<br>
+            <strong>Förhandsvisning av sett:</strong> {{ newMovie.watched ? "Ja" : "Nej" }}
+        </div>
         
-        <button type="submit" class="btn btn-primary">Lägg till film</button>
+        <button type="submit" class="btn btn-dark">Lägg till film</button>
     </form>
 </template>
 

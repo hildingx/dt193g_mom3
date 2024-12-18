@@ -8,10 +8,6 @@
     <!-- Sektion för att visa filmer i tabell -->
     <section class="container mx-auto my-5" style="max-width: 900px;">
         <h2>Filmlista</h2>
-        <!-- Laddningsindikator  -->
-        <div v-if="isLoading" class="text-center my-4">
-            <p>Laddar filmer...</p>
-        </div>
         <!-- Filmtabell -->
         <div class="table-responsive">
             <table class="table table-striped table-hover table-bordered align-middle">
@@ -29,6 +25,10 @@
                     <Movie v-for="movie in movies" :movie="movie" :key="movie._id" @deleteMovie="deleteMovie" />
                 </tbody>
             </table>
+            <!-- Laddningsindikator  -->
+            <div v-if="isLoading" class="text-center my-4">
+                <p>Laddar filmer...</p>
+            </div>
         </div>
     </section>
 </template>

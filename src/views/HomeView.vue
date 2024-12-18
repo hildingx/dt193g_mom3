@@ -1,17 +1,10 @@
 <script>
-    import banner from "@/assets/banner.jpg";
-    export default {
-        data() {
-            return {
-                banner,
-            };
-        }
-    };
+
 </script>
 
 <template>
     <div class="banner-container mb-4">
-        <img :src="banner" class="img-fluid" alt="Banner" />
+        <img src="@/assets/banner.jpg" class="img-fluid" alt="Banner" />
     </div>
     <section class="container mx-auto py-4" style="max-width: 900px;">
         <h2>Startsida</h2>

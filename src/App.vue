@@ -1,15 +1,14 @@
 <template>
   <Header />
   <main>
-    <RouterView />
+    <!-- Dynamiskt innehåll -->
+    <RouterView /> 
   </main>
-  <footer class="bg-light py-3">
-    <Footer />
-  </footer>
+  <Footer />
 </template>
 
 <script>
-import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'; // Vue-router för att hantera rutter
 import Header from "./components/Header.vue";
 import Footer from './components/Footer.vue';
 
